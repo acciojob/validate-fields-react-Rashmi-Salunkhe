@@ -10,16 +10,15 @@ const App = () => {
     setState({...state,[event.target.name]:event.target.value});
   }
 
-  function handleClick(){
-    
-    event.preventDefault();
-    if(state.name==='' || state.password===''){
-      setErrorMessage('Both name and password are required');
-    }
-    else{
-      setErrorMessage('');
-    }    console.log(state);
+function handleClick(event) {
+  event.preventDefault();
+  if (state.name === '' || state.password === '') {
+    setErrorMessage('Both name and password are required');
+  } else {
+    setErrorMessage('');
   }
+  console.log(state);
+}
 
   return (
     <div>
